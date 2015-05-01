@@ -15,7 +15,7 @@ BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(libwebp)
-BuildRequires:	pkgconfig(sdl2)
+BuildRequires:	pkgconfig(sdl2) >= 2.0.3
 
 %description
 This is a simple library to load images of various formats as SDL2 surfaces.
@@ -58,8 +58,6 @@ applications which will use %{name}.
 %setup -q
 
 %build
-# (anssi) --disable-x-shared disable dlopening, so that we link to them
-# dynamically instead, and thus get correct autorequires
 %configure2_5x \
 	--disable-static \
 	--enable-bmp \
