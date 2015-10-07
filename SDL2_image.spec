@@ -2,11 +2,12 @@
 %define api 2.0
 %define libname %mklibname %{name} %{api} %{major}
 %define devname %mklibname %{name} -d
+%define debug_package %{nil}
 
 Summary:	Simple DirectMedia Layer 2 - image
 Name:		SDL2_image
 Version:	2.0.0
-Release:	6
+Release:	7
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_image/index.html
@@ -60,6 +61,7 @@ applications which will use %{name}.
 %build
 # (anssi) --disable-x-shared disable dlopening, so that we link to them
 # dynamically instead, and thus get correct autorequires
+export CC=gcc
 %configure2_5x \
 	--disable-static \
 	--enable-bmp \
