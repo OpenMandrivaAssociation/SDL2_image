@@ -6,8 +6,8 @@
 
 Summary:	Simple DirectMedia Layer 2 - image
 Name:		SDL2_image
-Version:	2.0.0
-Release:	7
+Version:	2.0.1
+Release:	1
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_image/index.html
@@ -57,12 +57,15 @@ applications which will use %{name}.
 
 %prep
 %setup -q
+rm -rf external/
+touch NEWS README AUTHORS ChangeLog
 
 %build
 # (anssi) --disable-x-shared disable dlopening, so that we link to them
 # dynamically instead, and thus get correct autorequires
-export CC=gcc
-%configure2_5x \
+export OBJC=%{__cc}
+
+%configure \
 	--disable-static \
 	--enable-bmp \
 	--enable-gif \
@@ -74,6 +77,8 @@ export CC=gcc
 	--disable-jpg-shared \
 	--disable-png-shared \
 	--disable-tif-shared
+
+sed -i 's!CC -shared!CC -shared %{ldflags}!g' libtool
 
 %make
 
