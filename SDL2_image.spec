@@ -6,7 +6,7 @@
 
 Summary:	Simple DirectMedia Layer 2 - image
 Name:		SDL2_image
-Version:	2.0.1
+Version:	2.0.2
 Release:	1
 License:	Zlib
 Group:		System/Libraries
@@ -72,13 +72,16 @@ export OBJC=%{__cc}
 	--enable-jpg \
 	--enable-pcx \
 	--enable-png \
+	--enable-pnm \
+	--enable-tga \
 	--enable-tif \
 	--enable-xpm \
 	--disable-jpg-shared \
 	--disable-png-shared \
+	--disable-webp-shared \
 	--disable-tif-shared
 
-sed -i 's!CC -shared!CC -shared %{ldflags}!g' libtool
+sed -i 's!CC -shared!CC -shared -lm %{ldflags}!g' libtool
 
 %make
 
