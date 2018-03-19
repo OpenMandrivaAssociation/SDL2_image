@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   SDL2_image-2.0.2.tar.gz: 11d949e99a731622fe757f36ca8a18c42c234c4c
+sources:
+  SDL2_image-2.0.3.tar.gz: 024560bea385e36db68dd935e7053edfe4598b4e

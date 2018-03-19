@@ -6,7 +6,7 @@
 
 Summary:	Simple DirectMedia Layer 2 - image
 Name:		SDL2_image
-Version:	2.0.2
+Version:	2.0.3
 Release:	1
 License:	Zlib
 Group:		System/Libraries
@@ -16,7 +16,7 @@ BuildRequires:	jpeg-devel
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(libwebp)
-BuildRequires:	pkgconfig(sdl2)
+BuildRequires:	pkgconfig(sdl2) >= 2.0.8
 
 %description
 This is a simple library to load images of various formats as SDL2 surfaces.
