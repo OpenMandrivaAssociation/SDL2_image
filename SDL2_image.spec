@@ -6,7 +6,7 @@
 
 Summary:	Simple DirectMedia Layer 2 - image
 Name:		SDL2_image
-Version:	2.0.4
+Version:	2.0.5
 Release:	1
 License:	Zlib
 Group:		System/Libraries
@@ -83,8 +83,8 @@ export OBJC=%{__cc}
 
 sed -i 's!CC -shared!CC -shared -lm %{ldflags}!g' libtool
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
