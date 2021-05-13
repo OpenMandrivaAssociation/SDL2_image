@@ -2,17 +2,16 @@
 %define api 2.0
 %define libname %mklibname %{name} %{api} %{major}
 %define devname %mklibname %{name} -d
-%define debug_package %{nil}
 
 Summary:	Simple DirectMedia Layer 2 - image
 Name:		SDL2_image
 Version:	2.0.5
-Release:	2
+Release:	3
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_image/index.html
 Source0:	http://www.libsdl.org/projects/SDL_image/release/%{name}-%{version}.tar.gz
-BuildRequires:	jpeg-devel
+BuildRequires:	pkgconfig(libjpeg)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libtiff-4)
 BuildRequires:	pkgconfig(libwebp)
