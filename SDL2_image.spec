@@ -51,6 +51,7 @@ applications which will use %{name}.
 %{_includedir}/SDL2/*
 %{_libdir}/lib%{name}.so
 %{_libdir}/pkgconfig/SDL2_image.pc
+%{_libdir}/cmake/SDL2_image/
 
 #----------------------------------------------------------------------------
 
