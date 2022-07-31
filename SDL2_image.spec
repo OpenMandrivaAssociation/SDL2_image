@@ -5,12 +5,12 @@
 
 Summary:	Simple DirectMedia Layer 2 - image
 Name:		SDL2_image
-Version:	2.0.5
-Release:	4
+Version:	2.6.0
+Release:	1
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_image/index.html
-Source0:	http://www.libsdl.org/projects/SDL_image/release/%{name}-%{version}.tar.gz
+Source0:	https://github.com/libsdl-org/SDL_image/releases/download/release-%{version}/SDL2_image-%{version}.tar.gz
 BuildRequires:	pkgconfig(libjpeg)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libtiff-4)
@@ -47,10 +47,11 @@ This package contains the headers that programmers will need to develop
 applications which will use %{name}.
 
 %files -n %{devname}
-%doc README.txt CHANGES.txt COPYING.txt
+%doc README.txt CHANGES.txt
 %{_includedir}/SDL2/*
 %{_libdir}/lib%{name}.so
 %{_libdir}/pkgconfig/SDL2_image.pc
+%{_libdir}/cmake/SDL2_image/
 
 #----------------------------------------------------------------------------
 
