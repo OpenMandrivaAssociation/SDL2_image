@@ -6,7 +6,7 @@
 Summary:	Simple DirectMedia Layer 2 - image
 Name:		SDL2_image
 Version:	2.6.2
-Release:	2
+Release:	3
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_image/index.html
