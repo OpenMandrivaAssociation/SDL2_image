@@ -1,11 +1,12 @@
 %define major 0
 %define api 2.0
-%define libname %mklibname %{name} %{api} %{major}
+%define libname %mklibname %{name}
+%define oldlibname %mklibname %{name} 2.0 0
 %define devname %mklibname %{name} -d
 
 Summary:	Simple DirectMedia Layer 2 - image
 Name:		SDL2_image
-Version:	2.8.1
+Version:	2.8.2
 Release:	1
 License:	Zlib
 Group:		System/Libraries
@@ -28,6 +29,7 @@ This library currently supports BMP, PPM, PCX, GIF, JPEG, and PNG formats.
 %package -n %{libname}
 Summary:	Main library for %{name}
 Group:		System/Libraries
+%rename	%{oldlibname}
 
 %description -n %{libname}
 This package contains the library needed to run programs dynamically
