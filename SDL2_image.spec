@@ -10,7 +10,7 @@ Version:	2.8.2
 Release:	1
 License:	Zlib
 Group:		System/Libraries
-Url:		http://www.libsdl.org/projects/SDL_image/index.html
+Url:		https://www.libsdl.org/projects/SDL_image/index.html
 Source0:	https://github.com/libsdl-org/SDL_image/releases/download/release-%{version}/SDL2_image-%{version}.tar.gz
 BuildRequires:	pkgconfig(libavif)
 BuildRequires:	pkgconfig(libjxl)
