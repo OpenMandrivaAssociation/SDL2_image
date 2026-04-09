@@ -90,7 +90,7 @@ export OBJC=%{__cc}
 	--disable-webp-shared \
 	--disable-tif-shared
 
-sed -i 's!CC -shared!CC -shared -lm %{ldflags}!g' libtool
+#sed -i 's!CC -shared!CC -shared -lm %{ldflags}!g' libtool
 
 %make_build
 
